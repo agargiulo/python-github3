@@ -6,6 +6,7 @@ from datetime import datetime
 from pygithub3.tests.utils.core import TestCase
 from pygithub3.resources.base import Raw
 from pygithub3.tests.utils.resources import Nested, Simple, HasSimple
+from six.moves import filter
 
 simple_resource = dict(type='simple')
 has_simple = dict(type='has_simple', simple=simple_resource)

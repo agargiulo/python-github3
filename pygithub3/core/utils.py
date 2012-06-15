@@ -3,6 +3,8 @@
 """ Utils to support python 2.6 compatibility """
 
 from collections import MutableMapping
+from six.moves import map
+from six.moves import zip
 
 
 def _import_module(module_uri):

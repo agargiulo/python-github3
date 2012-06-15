@@ -4,6 +4,7 @@
 import re
 
 from . import Request, ValidationError
+from six.moves import filter
 
 # Src: http://code.djangoproject.com/svn/django/trunk/django/core/validators.py
 email_re = re.compile(

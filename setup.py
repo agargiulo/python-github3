@@ -3,6 +3,8 @@
 
 from setuptools import setup, find_packages
 import pygithub3
+from six.moves import map
+from six.moves import zip
 
 setup(
     name=pygithub3.__name__,

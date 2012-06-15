@@ -9,6 +9,8 @@ from pygithub3.core.result import smart, normal, base
 from pygithub3.tests.utils.core import (mock_paginate_github_in_GET, request,
                                         mock_no_paginate_github_in_GET,
                                         MockPaginate)
+from six.moves import filter
+import six
 
 
 class ResultInitMixin(object):
@@ -66,7 +68,7 @@ class TestSmartResultWithoutPaginate(ResultInitMixin, TestCase):
         return mock_no_paginate_github_in_GET
 
     def test_iteration_stop_at_1(self):
-        self.r.next()
+        six.advance_iterator(self.r)
         self.assertRaises(StopIteration, self.r.next)
 
     def test_get_only_1page(self):
